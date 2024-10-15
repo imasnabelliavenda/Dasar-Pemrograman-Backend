@@ -1,0 +1,41 @@
+{
+    "mahasiswa" : [
+        {
+            "nama" : "Imas Nabellia Venda",
+            "alamat" : {
+                "kec" : "Siliragung",
+                "kab" : "Banyuwangi"
+            },
+            "no_telp" : "081333687039",
+            "social_media" : {
+                "facebook" : "imasnabellia",
+                "twitter" : "@imasnabellia",
+                "instagram" : "@nbllve"
+            }
+        },
+        {
+            "nama" : "Ghulam Hajid",
+            "social_media" : {
+                "facebook" : "ghulamhajid",
+                "twitter" : "@ghulamhajid",
+                "instagram" : "@ghulamhajid"
+            }
+        },
+        {
+            "nama" : "Azzah Takiyyah",
+            "social_media" : {
+                "facebook" : "azzah",
+                "twitter" : "@azzah",
+                "instagram" : "@azzah"
+            }
+        },
+        {
+            "nama" : "Abid Ammar",
+            "social_media" : {
+                "facebook" : "abid",
+                "twitter" : "@abid",
+                "instagram" : "@abid"
+            }
+        }
+    ]
+}

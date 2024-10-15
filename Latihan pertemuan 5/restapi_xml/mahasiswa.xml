@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mahasiswa>
+    <nama>Ghulam</nama>
+    <alamat>Banyuwangi</alamat>
+    <jurusan>Teknik Informatika</jurusan>
+
+    <nama>Venda</nama>
+    <alamat>Banyuwangi</alamat>
+    <jurusan>Teknik Informatika</jurusan>
+
+    <hobi name="Memasak"/>
+    <hobi name="Nonton film"/>
+    <hobi name="Mendengarkan musik"/>
+</mahasiswa>
