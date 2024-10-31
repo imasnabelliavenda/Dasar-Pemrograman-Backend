@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <title>Form Edit</title>
+</head>
+<body>
+    <div class="container">
+        <div class="col-sm-5">
+            <h2>Ubah Data Barang</h2>
+            <form action="{{ url_for('edit', id_barang=data[0]) }}" method="post">
+                <div class="form-group">
+                    <input type="hidden" name="id_barang" value="{{data[0]}}" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Kode Barang:</label>
+                    <input type="text" name="kode" value="{{data[1]}}" class="form-control" placeholder="Masukan kode barang baru" required>
+                </div>
+                <div class="form-group">
+                    <label>Nama Barang:</label>
+                    <input type="text" name="nama" value="{{data[2]}}" class="form-control" placeholder="Masukan nama barang baru" required>
+                </div>
+                <div class="form-group">
+                    <label>Harga:</label>
+                    <input type="number" name="harga" value="{{data[3]}}" class="form-control" placeholder="Masukan harga baru" required>
+                </div>
+                <div class="form-group">
+                    <label>Stok:</label>
+                    <input type="number" name="jumlah" value="{{data[4]}}" class="form-control" placeholder="Masukan stok baru" required>
+                </div>
+                <button type="submit" id="Submit" name="submit" class="btn btn-primary">Edit Barang</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

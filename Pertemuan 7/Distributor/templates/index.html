@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Aplikasi CRUD</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+</head>
+<body>
+    <div class="container">
+    <h2>Aplikasi CRUD python Menggunakan Flask</h2>
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>Kode Barang</th>
+            <th>Nama Barang</th>
+            <th>Harga</th>
+            <th>Jumlah</th>
+            <th width="10%" colspan="2">Aksi</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for row in container %}
+            <tr>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }}</td>
+                <td><a href="http://localhost:5000/edit/{{row[0]}}" class="btn btn-warning" role="button">Ubah</a></td>
+                <td><a href="http://localhost:5000/hapus/{{row[0]}}" class="btn btn-danger" role="button">Hapus</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="http://localhost:5000/tambah" class="btn btn-primary" role="button">Tambah Data</a>
+    </div>
+</body>
+</html>
