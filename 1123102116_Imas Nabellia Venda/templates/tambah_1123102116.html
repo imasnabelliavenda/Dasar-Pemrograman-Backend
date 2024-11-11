@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Tambah Buku</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="col-sm-5">
+            <h2>Tambah Data Buku</h2>
+            <form action="{{ url_for('tambah') }}" method="post">
+                <div class="form-group">
+                    <label>Kode Buku:</label>
+                    <input type="text" name="kode" class="form-control" placeholder="Masukan kode buku" required>
+                </div>
+                <div class="form-group">
+                    <label>Nama Buku:</label>
+                    <input type="text" name="nama" class="form-control" placeholder="Masukan nama buku" required>
+                </div>
+                <div class="form-group">
+                    <label>Penerbit:</label>
+                    <input type="text" name="penerbit" class="form-control" placeholder="Masukan penerbit" required>
+                </div>
+                <div class="form-group">
+                    <label>Pengarang:</label>
+                    <input type="text" name="pengarang" class="form-control" placeholder="Masukan pengarang" required>
+                </div>
+                <div class="form-group">
+                    <label>Jumlah Buku:</label>
+                    <input type="number" name="jumlah" class="form-control" placeholder="Masukan jumlah buku" required>
+                </div>
+                <button type="submit" id="Submit" name="submit" class="btn btn-primary">Tambah Buku</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

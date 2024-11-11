@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <title>Form Edit Buku</title>
+</head>
+<body>
+    <div class="container">
+        <div class="col-sm-5">
+            <h2>Ubah Data Buku</h2>
+            <form action="{{ url_for('edit', kode_buku=data[0]) }}" method="post">
+                <div class="form-group">
+                    <label>Kode Buku:</label>
+                    <input type="text" name="kode" value="{{data[0]}}" class="form-control" placeholder="Masukan kode buku baru" required>
+                </div>
+                <div class="form-group">
+                    <label>Nama Buku:</label>
+                    <input type="text" name="nama" value="{{data[1]}}" class="form-control" placeholder="Masukan nama buku baru" required>
+                </div>
+                <div class="form-group">
+                    <label>Penerbit:</label>
+                    <input type="text" name="penerbit" value="{{data[2]}}" class="form-control" placeholder="Masukan penerbit baru" required>
+                </div>
+                <div class="form-group">
+                    <label>Pengarang:</label>
+                    <input type="text" name="pengarang" value="{{data[3]}}" class="form-control" placeholder="Masukan pengarang baru" required>
+                </div>
+                <div class="form-group">
+                    <label>Jumlah Buku:</label>
+                    <input type="number" name="jumlah" value="{{data[4]}}" class="form-control" placeholder="Masukan jumlah buku baru" required>
+                </div>
+                <button type="submit" id="Submit" name="submit" class="btn btn-primary">Edit Buku</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

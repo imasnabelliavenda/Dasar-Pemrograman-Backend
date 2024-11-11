@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2 style="text-align: center; padding-top: 3%;">Data Buku</h2>
+        <br>
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr style="background-color: lightgreen;">
+                <th>Kode Buku</th>
+                <th>Nama Buku</th>
+                <th>Penerbit</th>
+                <th>Pengarang</th>
+                <th>Jumlah Buku</th>
+                <th width="10%" colspan="2">Aksi</th>
+            </tr>
+            </thead>
+            <tbody>
+                {% for row in container %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                    <td>{{ row[4] }}</td>
+                    <td><a href="{{ url_for('edit', kode_buku=row[0]) }}" class="btn btn-warning" role="button">Ubah</a></td>
+                    <td><a href="{{ url_for('hapus', kode_buku=row[0]) }}" class="btn btn-danger" role="button">Hapus</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{{ url_for('tambah') }}" class="btn btn-primary" role="button">Tambah Buku</a>
+    </div>
+</body>
+</html>
