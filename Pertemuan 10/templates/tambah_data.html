@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Data</title>
+</head>
+<body>
+    {% extends 'layout.html' %}
+    {% block body %}
+        <div class="row">
+            <div class="col-5 mx-auto">
+                <h3 class="text-center">Tambah Data Siswa</h3><hr>
+                <form method="post" action="{{url_for('tambah_data')}}">
+                    <div class="form-group">
+                        <label for="nama">Nama Siswa</label>
+                        <input type="text" id="nama" name="nama" class="form-control" placeholder="Masukkan Nama Siswa" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Masukkan Email" required>
+                    </div>
+                    <button type="submit" class="btn btn-success mt-3">Simpan</button>
+                    <a href="{{url_for('index')}}" class="btn btn-secondary mt-3">Batal</a>
+                </form>
+            </div>
+        </div>
+    {% endblock %}
+</body>
+</html>
