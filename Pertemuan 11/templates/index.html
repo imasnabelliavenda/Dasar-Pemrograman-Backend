@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Flask MongoDB</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+    
+</head>
+<body>
+    <h1>Daftar Mahasiswa Stikom</h1>
+    <button class="btn pull-right main-btn" data-toggle="modal" data-target="#my-modal">
+        <a href="{{url_for('add')}}" class="btn btn-success">Tambah Data</a>
+    </button>
+    <table class="table" width="50%">
+        <thead>
+            <tr class="heading-row">
+                <th>Nama</th>
+                <th>Alamat</th>
+                <th>Jurusan</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{ user['name'] }}</td>
+                <td>{{ user['alamat'] }}</td>
+                <td>{{ user['jurusan'] }}</td>
+                <td>{{ user['email'] }}</td>
+                <td>
+                    <a href="{{url_for('edit', id=user['_id'])}}" class="btn btn-primary">Update</a>
+                    <a href="{{url_for('delete', id=user['_id'])}}" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
