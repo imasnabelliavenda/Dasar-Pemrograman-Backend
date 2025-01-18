@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+    <title>Edit Data</title>
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+    <!-- owl slider stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <!-- nice select -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+    <!-- font awesome style -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/font-awesome.min.css') }}" />
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+    <!-- responsive style -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/responsive.css') }}" />
+    <!-- icon -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <div class="edit_section">
+            <div class="row">
+                <div class="col-5 mx-auto">
+                    {% block body %}
+                            <h3>Edit Data</h3><hr>
+                            <form method="post" action="{{url_for('edit_data', id=datas.ID)}}" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <label for="nama">Nama Makanan</label>
+                                    <input type="text" name="nama" required class="form-control" value="{{datas.nama}}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="harga">Harga</label>
+                                    <input type="text" name="harga" required class="form-control" value="{{datas.harga}}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="kategori">Kategori</label>
+                                    <input type="text" name="kategori" required class="form-control" value="{{datas.kategori}}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="deskripsi">Deskripsi</label>
+                                    <textarea name="deskripsi" required class="form-control">{{datas.deskripsi}}</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="gambar">Upload Gambar</label>
+                                    {% if datas.gambar %}
+                                        <img src="{{ url_for('static', filename='uploads/' ~ datas.gambar) }}" alt="Gambar lama" width="100">
+                                    {% endif %}
+                                    <input type="file" name="gambar" class="form-control">
+                                    <input type="hidden" name="old_image" value="{{ datas.gambar }}">
+                                </div>                    
+                                <button type="submit" class="btn btn-success mt-3">Update</button>
+                                <a href="{{ url_for('admin_menu') }}" class="btn btn-secondary mt-3">Batal</a>
+                            </form>
+                        </div>
+                    </div>
+                    {% endblock %}
+                </div>
+            </div>
+    </div>
+    
+</body>
+</html>

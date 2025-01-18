@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/favicon.png" type="">
+
+  <title> Lymas Cafe </title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- nice select  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+  <!-- font awesome style -->
+  <link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{{ url_for('static', filename='css/responsive.css') }}" rel="stylesheet" />
+
+</head>
+
+<body>
+
+  <div class="hero_area">
+    <div class="bg-box">
+      <img src="/static/images/hero-bg.jpg" alt="">
+    </div>
+    <!-- header section strats -->
+    <header class="header_section ">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="{{ url_for('index') }}">
+            <span>
+              Lymas
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin:auto;">
+            <ul class="navbar-nav  mx-auto ">
+              <li class="nav-item">
+                <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#menu">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+            </ul>
+            
+            <div class="user_option" style="margin-left: 230px;">
+              <form class="form-inline" id="search-form" style="display: none;">
+                <input class="form-control" type="text" id="search-input" placeholder="Search for menu...">
+              </form>
+              <button class="btn my-2 my-sm-0 nav_search-btn" type="button" id="search-icon">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+              <a href="{{ url_for('login') }}" class="user_link">
+                <i class="fa fa-user" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+
+    <!-- slider section -->
+    <section class="slider_section" id="home">
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-7 col-lg-6 ">
+                  <div class="detail-box">
+                    <h1>
+                      Selamat Datang di Lymas Cafe
+                    </h1>
+                    <p>Lymas Cafe adalah tempat ideal untuk menikmati hidangan cepat saji lezat, minuman segar, dan camilan berkualitas, dengan suasana nyaman yang cocok untuk bersantai bersama keluarga dan teman.Kami menghadirkan pengalaman bersantap yang tak terlupakan dengan berbagai pilihan menu istimewa, mulai dari makanan cepat saji, minuman spesial, hingga camilan nikmat, semuanya dalam suasana modern yang nyaman dan ramah.
+                    </p>
+                    <div class="btn-box">
+                      <a href="#menu" class="btn1">
+                        Lihat Menu
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item ">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-7 col-lg-6 ">
+                  <div class="detail-box">
+                    <h1>
+                      Selamat Datang di Lymas Cafe
+                    </h1>
+                    <p>
+                      Temukan pengalaman bersantai yang sempurna di Lymas Cafe. Kami menyajikan aneka menu makanan dan minuman berkualitas tinggi dengan sentuhan rasa yang unik, dalam suasana yang dirancang untuk kebersamaan dengan keluarga dan teman.
+                    </p>
+                    <div class="btn-box">
+                      <a href="#menu" class="btn1">
+                        Lihat Menu
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-7 col-lg-6 ">
+                  <div class="detail-box">
+                    <h1>
+                      Selamat Datang di Lymas Cafe
+                    </h1>
+                    <p>
+                      Kami menghadirkan pengalaman bersantap yang tak terlupakan dengan berbagai pilihan menu istimewa, mulai dari makanan cepat saji, minuman spesial, hingga camilan nikmat, semuanya dalam suasana modern yang nyaman dan ramah.
+                    </p>
+                    <div class="btn-box">
+                      <a href="#menu" class="btn1">
+                        Lihat Menu
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <ol class="carousel-indicators">
+            <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+            <li data-target="#customCarousel1" data-slide-to="1"></li>
+            <li data-target="#customCarousel1" data-slide-to="2"></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!-- food section -->
+  <section class="food_section layout_padding-bottom" id="menu">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Our Menu
+        </h2>
+      </div>
+
+      <!-- Filter Kategori -->
+      <ul class="filters_menu list-inline text-center">
+        <li class="list-inline-item filter-btn {{ 'active' }}" data-kategori="all">
+          All
+        </li>
+        <li class="list-inline-item filter-btn {{ 'active' }}" data-kategori="makanan">
+          Makanan
+        </li>
+        <li class="list-inline-item filter-btn {{ 'active' }}" data-kategori="minuman">
+          Minuman
+        </li>
+        <li class="list-inline-item filter-btn {{ 'active' }}" data-kategori="camilan">
+          Camilan
+        </li>
+      </ul>
+      
+      <!-- Food Items -->
+      <div class="row" id="food-items">
+        {% for data in datas %}
+        <div class="col-lg-4 all {{ data['kategori'] }}">
+          <div class="box" data-title="{{ data['nama'] }}" data-desc="{{ data['deskripsi'] }}">
+            <div>
+              <div class="img-box">
+                <img src="{{ url_for('static', filename='images/' ~ data['gambar']) }}" class="card-img-top" alt="{{ data['nama'] }}">
+              </div>
+              <div class="detail-box">
+                <h5>{{ data['nama'] }}</h5>
+                <div class="options">
+                  <h6>Rp. {{ data['harga'] }}</h6>
+                  <button 
+                    class="btn btn-primary open-modal" 
+                    data-title="{{ data['nama'] }}" 
+                    data-desc="{{ data['deskripsi'] }}" 
+                    data-id="{{ data['ID'] }}">
+                    Detail
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      
+      <!-- Script Filter -->
+      <script>
+        const filterButtons = document.querySelectorAll('.filter-btn');
+      
+        filterButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            const kategori = button.getAttribute('data-kategori');
+      
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            
+            button.classList.add('active');
+            const items = document.querySelectorAll('#food-items .col-lg-4');
+            items.forEach(item => {
+              if (kategori === 'all' || item.classList.contains(kategori)) {
+                item.style.display = 'block';
+              } else {
+                item.style.display = 'none';
+              }
+            });
+          });
+        });
+      </script>
+  </section>    
+  <!-- end food section -->
+
+  <!-- About Section -->
+  <section class="about_section layout_padding" id="about">
+    <div class="container">
+      <div class="row">
+        <!-- Google Maps -->
+        <div class="col-md-6">
+          <div class="map-box" style="margin-right: 20px;">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.8150190545994!2d114.367691!3d-8.2213497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd14532ca02e0f1%3A0x487748494ecef50b!2sSekolah%20Tinggi%20Ilmu%20Komputer%20PGRI%20Banyuwangi!5e0!3m2!1sid!2sid!4v1736772679243!5m2!1sid!2sid" 
+              width="100%" 
+              height="300" 
+              frameborder="0" 
+              style="border:0;" 
+              allowfullscreen="" 
+              aria-hidden="false" 
+              tabindex="0">
+            </iframe>
+          </div>
+        </div>
+        
+        <!-- Deskripsi -->
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h1>
+                Tentang Kami
+              </h1>
+            </div>
+            <p style="text-align: justify;">
+              Lymas Cafe didirikan pada tahun 2020 oleh Sherly dan Imas, bertujuan menyediakan hidangan cepat saji lezat dan minuman segar dalam suasana nyaman. Nama cafe ini merupakan gabungan nama pendirinya, memberikan pengalaman kuliner unik di setiap kunjungan.
+            </p>
+            <p style="text-align: justify;">
+              Tempat ini menjadi pilihan tepat untuk bersantai bersama keluarga, teman, atau rekan kerja. Dengan bahan-bahan segar dan cita rasa yang kaya, Lymas Cafe selalu berusaha memberikan layanan terbaik dan hidangan yang memuaskan.
+            </p>
+          </div>
+        </div>      
+      </div>
+    </div>
+  </section>
+  <!-- End About Section -->
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p>Created with love by:</p>
+      <p>Imas Nabellia Venda | 1123102116 <br> Sherly Puput Rahmawati | 1123102147</p>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 id="parse-title" class="modal-title"></h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          <p id="parse-desc"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pop Up -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+  $(document).ready(function () {
+    $(".open-modal").click(function (e) {
+      e.preventDefault();
+      var title = $(this).data("title");
+      var desc = $(this).data("desc");
+      var id = $(this).data("id");
+
+      if (id !== undefined) {
+        $("#parse-title").text(title);
+        $("#parse-desc").text(desc);
+        $("#delete-button").attr("data-id", id);
+        $("#edit-button").attr("href", "/edit-data/" + id); 
+        $("#modal").modal("show");
+      } else {
+        console.error("ID is undefined");
+      }
+    });
+  });
+
+  // search
+  $(document).ready(function () {
+    $("#search-icon").click(function () {
+      $("#search-form").toggle();
+      $("#search-input").focus();
+    });
+
+    $("#search-form").submit(function (e) {
+      e.preventDefault();
+      
+      var searchQuery = $("#search-input").val().toLowerCase();
+      $("#food-items .col-lg-4").each(function () {
+        var title = $(this).find(".detail-box h5").text().toLowerCase();
+        var description = $(this).find(".detail-box p").text().toLowerCase();
+        
+        if (title.indexOf(searchQuery) === -1 && description.indexOf(searchQuery) === -1) {
+          $(this).hide();
+        } else {
+          $(this).show();
+        }
+      });
+    });
+  });
+  </script>  
+
+  <!-- jQery -->
+  <script src="/static/js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <!-- bootstrap js -->
+  <script src="/static/js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- isotope js -->
+  <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+  <!-- nice select -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+  <!-- custom js -->
+  <script src="/static/js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  <!-- End Google Map -->
+
+</body>
+</html>
